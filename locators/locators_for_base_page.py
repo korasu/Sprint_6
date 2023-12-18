@@ -1,0 +1,25 @@
+from selenium.webdriver.common.by import By
+
+
+class LocatorsBasePage:
+    yandex_logo = (By.CLASS_NAME, 'Header_LogoYandex__3TSOI')
+    scooter_logo = (By.CLASS_NAME, 'Header_LogoScooter__3lsAR')
+    cookie_button = (By.ID, 'rcc-confirm-button')
+    header_order_button = (By.CLASS_NAME, 'Button_Button__ra12g')
+    bottom_order_button = (By.XPATH, './/button[@class ="Button_Button__ra12g Button_UltraBig__UU3Lp"]')
+    first_question = (By.ID, "accordion__heading-0")
+    second_question = (By.ID, "accordion__heading-1")
+    third_question = (By.ID, "accordion__heading-2")
+    fourth_question = (By.ID, "accordion__heading-3")
+    fifth_question = (By.ID, "accordion__heading-4")
+    six_question = (By.ID, "accordion__heading-5")
+    seventh_question = (By.ID, "accordion__heading-6")
+    eighth_question = (By.ID, "accordion__heading-7")
+    first_answer = (By.ID, "accordion__panel-0")
+    second_answer = (By.ID, "accordion__panel-1")
+    third_answer = (By.ID, "accordion__panel-2")
+    fourth_answer = (By.ID, "accordion__panel-3")
+    fifth_answer = (By.ID, "accordion__panel-4")
+    six_answer = (By.ID, "accordion__panel-5")
+    seventh_answer = (By.ID, "accordion__panel-6")
+    eighth_answer = (By.ID, "accordion__panel-7")
