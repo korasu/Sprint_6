@@ -10,16 +10,19 @@ class LocatorsOrderingPage:
     address_input = (By.XPATH, './/input[@placeholder = "* Адрес: куда привезти заказ"]')
     # поле ввода метро
     metro_input = (By.XPATH, './/input[@placeholder = "* Станция метро"]')
+    # выбор станции из списка
+    select_metro_station = (By.CLASS_NAME, "select-search__select")
     # поле ввода телефона
     phone_input = (By.XPATH, './/input[@placeholder = "* Телефон: на него позвонит курьер"]')
     # поле ввода даты
     data_input = (By.XPATH, './/input[@placeholder = "* Когда привезти самокат"]')
     # дата для первого теста
-    first_data = (By.XPATH, ".//div[@class = 'react-datepicker__day react-datepicker__day--019']")
+    first_data = (By.XPATH, ".//div[@aria-label = 'Choose вторник, 19-е декабря 2023 г.']")
     # дата для второго теста
-    second_data = (By.XPATH, ".//div[@class = 'react-datepicker__day react-datepicker__day--007']")
+    second_data = (By.XPATH, ".//div[@aria-label = 'Choose четверг, 7-е декабря 2023 г.']")
+    dropdown_rent = (By.XPATH, ".//span[@class = 'Dropdown-arrow']")
     # срок аренды для первого теста
-    first_rent_time = (By.XPATH, ".//div[@class = 'Dropdown-option' and text() = 'трое суток'']")
+    first_rent_time = (By.XPATH, ".//div[@class = 'Dropdown-option' and text() = 'трое суток']")
     # срок аренды для второго теста
     second_rent_time = (By.XPATH, ".//div[@class = 'Dropdown-option' and text() = 'пятеро суток']")
     # цвет самоката для первого теста
@@ -29,12 +32,13 @@ class LocatorsOrderingPage:
     # поле ввода комментария
     comment_input = (By.XPATH, './/input[@placeholder = "Комментарий для курьера"]')
     # кнопка для продолжения оформления
-    next_button = (By.CLASS_NAME, './/button[text() =  "Далее"]')
+    next_button = (By.XPATH, './/button[text() = "Далее"]')
     # кнопка для заказа
-    ordering_button = (By.XPATH, './/button[text() =  "Заказать"]')
+    ordering_button = (By.XPATH, './/div[@class = "Order_Buttons__1xGrp"]/button[text() = "Заказать"]')
     # кнопка для подтверждения заказа
-    yes_button = (By.XPATH, './/button[text() =  "Да"]')
+    yes_button = (By.XPATH, './/button[text() = "Да"]')
     # кнопка для отказа от заказа
-    no_button = (By.XPATH, './/button[text() =  "Нет"]')
-    # кнопка для проверки статуса
-    status_button = (By.XPATH, './/button[text() =  "Посмотреть статус"]')
+    no_button = (By.XPATH, './/button[text() = "Нет"]')
+    # поле статуса заказа
+    status_field = (By.XPATH, './/div[@class = "Order_ModalHeader__3FDaJ"]')
+

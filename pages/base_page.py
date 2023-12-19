@@ -18,3 +18,10 @@ class BasePage:
     @allure.step("Нажатие на кнопку Cookie")
     def click_cookie_button(self):
         self.driver.find_element(*LocatorsBasePage.cookie_button).click()
+
+    @allure.step('Получение текущего URL')
+    def get_current_url(self):
+        return self.driver.current_url
+
+    def switch_tab(self):
+        self.driver.switch_to.window(self.driver.window_handles[1])

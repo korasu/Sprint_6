@@ -1,8 +1,10 @@
+import allure
+import pytest
+
 from pages.main_page import MainPage
 from pages.base_page import BasePage
 from locators.locators_for_base_page import LocatorsBasePage
 from data import Data
-import pytest
 
 
 class TestQuestion:
@@ -17,6 +19,7 @@ class TestQuestion:
         [LocatorsBasePage.eighth_question, LocatorsBasePage.eighth_answer, Data.answer8]
     ]
 
+    @allure.title("Тест проверки блока 'Вопросы о главном'")
     @pytest.mark.parametrize('locator_question,locator_answer,answer', question_and_answer)
     def test_open_answer_on_question(self, driver, locator_question, locator_answer, answer):
         base_page = BasePage(driver)

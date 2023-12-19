@@ -1,10 +1,9 @@
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 import pytest
 
 @pytest.fixture
 def driver():
-    options = webdriver.ChromeOptions()
-    options.add_argument('headless')
-    driver = webdriver.Chrome(options=options)
+    driver = webdriver.Firefox()
     yield driver
     driver.quit()
