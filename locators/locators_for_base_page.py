@@ -31,4 +31,4 @@ class LocatorsBasePage:
     seventh_answer = (By.ID, "accordion__panel-6")
     eighth_answer = (By.ID, "accordion__panel-7")
     # банер с предложение установки Яндекс браузера на странице Дзена
-    banner_yandex_browser = (By.CSS_SELECTOR, ".w1e6c6530")
+    banner_yandex_browser = (By.XPATH, ".//div[@popup-getfocusable-id = 'csr-uniq3']")

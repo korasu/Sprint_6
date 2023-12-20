@@ -22,16 +22,11 @@ class TestQuestion:
     @allure.title("Тест проверки блока 'Вопросы о главном'")
     @pytest.mark.parametrize('locator_question,locator_answer,answer', question_and_answer)
     def test_open_answer_on_question(self, driver, locator_question, locator_answer, answer):
-        base_page = BasePage(driver)
-
-        base_page.open_site()
-
         main_page = MainPage(driver)
 
+        main_page.open_site()
         main_page.scroll_to_question()
-
         main_page.click_on_question(locator_question)
-
         actual_answer = main_page.taken_answer(locator_answer)
 
         assert actual_answer == answer
