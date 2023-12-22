@@ -1,6 +1,5 @@
 import allure
 from pages.main_page import MainPage
-from pages.base_page import BasePage
 from pages.ordering_page import OrderingPage
 from locators.locators_for_ordering_page import LocatorsOrderingPage
 from data import Data
@@ -20,7 +19,9 @@ class TestOrdering:
         order_page.filling_order(Data.metro1, LocatorsOrderingPage.first_data,
                                  LocatorsOrderingPage.first_rent_time, LocatorsOrderingPage.black_scooter)
 
-        assert "Заказ оформлен" in order_page.get_text_order()
+        successful_order = order_page.get_text_order()
+
+        assert "Заказ оформлен" in successful_order
 
     @allure.title("Тест на оформление заказа с помощью кнопки в конце страницы")
     def test_ordering_with_bottom_button(self, driver):
@@ -35,4 +36,6 @@ class TestOrdering:
         order_page.filling_order(Data.metro2, LocatorsOrderingPage.second_data,
                                  LocatorsOrderingPage.second_rent_time, LocatorsOrderingPage.grey_scooter)
 
-        assert "Заказ оформлен" in order_page.get_text_order()
+        successful_order = order_page.get_text_order()
+
+        assert "Заказ оформлен" in successful_order

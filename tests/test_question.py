@@ -2,21 +2,20 @@ import allure
 import pytest
 
 from pages.main_page import MainPage
-from pages.base_page import BasePage
 from locators.locators_for_base_page import LocatorsBasePage
-from data import Data
+from data import Answer
 
 
 class TestQuestion:
     question_and_answer = [
-        [LocatorsBasePage.first_question, LocatorsBasePage.first_answer, Data.answer1],
-        [LocatorsBasePage.second_question, LocatorsBasePage.second_answer, Data.answer2],
-        [LocatorsBasePage.third_question, LocatorsBasePage.third_answer, Data.answer3],
-        [LocatorsBasePage.fourth_question, LocatorsBasePage.fourth_answer, Data.answer4],
-        [LocatorsBasePage.fifth_question, LocatorsBasePage.fifth_answer, Data.answer5],
-        [LocatorsBasePage.six_question, LocatorsBasePage.six_answer, Data.answer6],
-        [LocatorsBasePage.seventh_question, LocatorsBasePage.seventh_answer, Data.answer7],
-        [LocatorsBasePage.eighth_question, LocatorsBasePage.eighth_answer, Data.answer8]
+        [LocatorsBasePage.first_question, LocatorsBasePage.first_answer, Answer.answer1],
+        [LocatorsBasePage.second_question, LocatorsBasePage.second_answer, Answer.answer2],
+        [LocatorsBasePage.third_question, LocatorsBasePage.third_answer, Answer.answer3],
+        [LocatorsBasePage.fourth_question, LocatorsBasePage.fourth_answer, Answer.answer4],
+        [LocatorsBasePage.fifth_question, LocatorsBasePage.fifth_answer, Answer.answer5],
+        [LocatorsBasePage.six_question, LocatorsBasePage.six_answer, Answer.answer6],
+        [LocatorsBasePage.seventh_question, LocatorsBasePage.seventh_answer, Answer.answer7],
+        [LocatorsBasePage.eighth_question, LocatorsBasePage.eighth_answer, Answer.answer8]
     ]
 
     @allure.title("Тест проверки блока 'Вопросы о главном'")
